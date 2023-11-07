@@ -4,15 +4,16 @@ public class Libro {
     private String titulo;
     private int paginas;
     private int portada;
+    private String descripcion;
 
     public Libro() {
     }
 
-    public Libro(String titulo, int paginas, int portada) {
+    public Libro(String titulo, int paginas, int portada, String descripcion) {
         this.titulo = titulo;
         this.paginas = paginas;
         this.portada = portada;
-
+        this.descripcion = descripcion;
     }
 
     public String getTitulo() {
@@ -37,5 +38,13 @@ public class Libro {
 
     public void setPortada(int portada) {
         this.portada = portada;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
