@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,16 +16,23 @@ public class DetallesLibro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalles_libro);
 
-        imgPortadaLibro = (ImageView) findViewById(R.id.imgViewPortada);
-        tituloLibro = (TextView) findViewById(R.id.tvTitulo);
-        numPaginas = (TextView) findViewById(R.id.tvPaginas);
+        imgPortadaLibro = (ImageView) findViewById(R.id.imgVwLibro);
+        tituloLibro = (TextView) findViewById(R.id.tvTituloLibro);
+        numPaginas = (TextView) findViewById(R.id.tvNumPaginas);
         descripcion = (TextView) findViewById(R.id.tvDescripcionLibro);
 
         Intent extra = getIntent();
         if (extra !=null){
-            imgPortadaLibro.setImageResource(extra.getIntExtra("extra_portada", com.google.android.material.R.drawable.abc_ic_star_black_16dp));
-
-            tituloLibro.setText(extra.getStringExtra(""));
+            imgPortadaLibro.setImageResource(extra.getIntExtra("extra_imagen", R.drawable.error_24));
+            tituloLibro.setText(extra.getStringExtra("extra_titulo"));
+            numPaginas.setText(extra.getStringExtra("extra_paginas"));
+            descripcion.setText(extra.getStringExtra("extra_descripcion"));
         }
     }
+
+    public void volverPagLibros(View v){
+        Intent i = new Intent(this, MainActivityLibros.class);
+        startActivity(i);
+    }
+
 }

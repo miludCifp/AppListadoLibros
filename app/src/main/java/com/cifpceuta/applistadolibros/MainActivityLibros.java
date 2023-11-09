@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityLibros extends AppCompatActivity {
     private ListView lvListado;
     private MiArrayAdapterLibros adapterLibros;
     @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("extra_imagen",libro.getPortada());
                 i.putExtra("extra_titulo",libro.getTitulo());
                 i.putExtra("extra_paginas",libro.getPaginas());
-                i.putExtra("extra_titulo",libro.getDescripcion());
+                i.putExtra("extra_descripcion",libro.getDescripcion());
 
                 startActivity(i);
             }

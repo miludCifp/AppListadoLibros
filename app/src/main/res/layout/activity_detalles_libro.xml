@@ -21,8 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:src="@tools:sample/avatars" />
+                android:layout_marginTop="40dp" />
 
             <TextView
                 android:id="@+id/tvTituloLibro"
@@ -55,6 +54,8 @@
                 android:id="@+id/btnVolver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="volverPagLibros"
                 android:text="Volver" />
 
 
