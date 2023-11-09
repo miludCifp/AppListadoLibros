@@ -25,7 +25,8 @@ public class DetallesLibro extends AppCompatActivity {
         if (extra !=null){
             imgPortadaLibro.setImageResource(extra.getIntExtra("extra_imagen", R.drawable.error_24));
             tituloLibro.setText(extra.getStringExtra("extra_titulo"));
-            numPaginas.setText(extra.getStringExtra("extra_paginas"));
+            int numPaginasInt = extra.getIntExtra("extra_paginas",0);
+            numPaginas.setText(numPaginas.getText()+ " : " + numPaginasInt);
             descripcion.setText(extra.getStringExtra("extra_descripcion"));
         }
     }
